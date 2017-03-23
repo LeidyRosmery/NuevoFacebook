@@ -38,16 +38,13 @@
                   editar.innerHTML = "Guardar";
                   textarea.disabled = false;
                   cambiarBoton = 1;
-                } else {
-
+              } else {
                   editar.innerHTML = "Editar";
                   textarea.disabled = true;
                   cambiarBoton = 0;
                   var postId = e.target.parentNode.getAttribute('data-id');
-                miPost1.array[postId].texto=textarea.value
+                  miPost1.array[postId].texto = textarea.value
               }
-
-
           });
           var eliminar = document.createElement("a");
           eliminar.innerHTML = "Eliminar";
@@ -66,8 +63,6 @@
           return fieldset;
       }
   }
-
-
   btnPublicar.addEventListener('click', function() {
       var textPost = document.getElementById("texto");
       var estado = document.getElementById("seleccionEstado");

@@ -6,20 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mi Muro</title>
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body>
     <h1> Spec - Muro</h1>
     <fieldset style="width : 250px">
         <textarea id="texto" name="name" rows="8" cols="60" placeholder=" Que te esta pasando ... ???"></textarea>
+        <span> <input type="file" id="files" value="Foto/Video" name="files[]" multiple /> </span><br>
         <select class="" name="" id="seleccionEstado">
           <option value="amigos"> Amigos</option>
           <option value="publico"> Publico</option>
         </select>
         <input type="button" value="Publicar " id="botonPublicar">
     </fieldset>
+    <a href="#" id="postPublico"> Publico </a>
+    <a href="#" id="postPrivado" > Amigos </a>
     <div id="divMostrar"></div>
     <script type="text/javascript" src="assets/js/main.js">
+    </script>
+    <script type="text/javascript" src="assets/js/app.js">
+
     </script>
 </body>
 
