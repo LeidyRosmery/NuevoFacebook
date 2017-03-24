@@ -12,12 +12,14 @@
 <body>
     <h1> Spec - Muro</h1>
     <fieldset style="width : 250px">
-        <textarea id="texto" name="name" rows="8" cols="60" placeholder=" Que te esta pasando ... ???"></textarea>
-        <span> <input type="file" id="files" value="Foto/Video" name="files[]" multiple /> </span><br>
-        <select class="" name="" id="seleccionEstado">
-          <option value="amigos"> Amigos</option>
-          <option value="publico"> Publico</option>
-        </select>
+      <legend> <h3> Mi estado </h3> </legend>
+      <select class="" name="" id="seleccionEstado">
+        <option value="amigos"> Amigos</option>
+        <option value="publico"> Publico</option>
+      </select>
+        <textarea id="texto" name="name" rows="2" cols="60" placeholder=" Que te esta pasando ... ???"></textarea>
+        <div id="imagenDiv"></div>
+        <input type="file" id="files" value="Foto/Video" name="files[]" multiple /><br>
         <input type="button" value="Publicar " id="botonPublicar">
     </fieldset>
     <a href="#" id="postPublico"> Publico </a>
