@@ -1,7 +1,10 @@
 body {
-  background-color: #D6DBDF;
+  background-color: #EEF1F4  ;
 }
 .thumb {
   height: 250px;
   margin: 3px 2px 0 0;
+}
+#fielset{
+  background-color:black ;
 }

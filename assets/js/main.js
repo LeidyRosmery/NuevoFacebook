@@ -1,15 +1,16 @@
   var btnPublicar = document.getElementById("botonPublicar");
   var miPost1 = new miPost();
- var contador=0;
+  var contador = 0;
+
   function miPost() {
       this.array = [];
       this.contador = 0;
-      this.crearPost = function(texto, estado,imagen) {
+      this.crearPost = function(texto, estado, imagen) {
           this.array.push({
               id: this.contador,
               texto: texto,
               estado: estado,
-              imagen:imagen
+              imagen: imagen
           })
           this.contador++;
       }
@@ -18,13 +19,13 @@
       this.creaPost = function(parent) {
           parent.innerHTML = "";
           this.array.forEach(function(elemento) {
-              parent.appendChild(this.publicaPost(elemento.texto, elemento.id,elemento.imagen));
+              parent.appendChild(this.publicaPost(elemento.texto, elemento.id, elemento.imagen));
           }, this);
       }
       //*************************
 
       //**********************************************************
-      this.publicaPost = function(text, id,img) {
+      this.publicaPost = function(text, id, img) {
           var fieldset = document.createElement("fieldset");
           fieldset.style = "width : 250px";
           fieldset.setAttribute("data-id", id);
@@ -32,9 +33,9 @@
           textarea.cols = "60";
           textarea.innerHTML = text;
           textarea.setAttribute("disabled", true);
-          var miPic= document.createElement("img");
-          miPic.setAttribute("src",img);
-        miPic.setAttribute("class","thumb");
+          var miPic = document.createElement("img");
+          miPic.setAttribute("src", img);
+          miPic.setAttribute("class", "thumb");
           var editar = document.createElement("a");
           editar.innerHTML = "Editar";
           editar.setAttribute("href", "#");
@@ -76,11 +77,11 @@
       var textPost = document.getElementById("texto");
       var estado = document.getElementById("seleccionEstado");
       var div = document.getElementById("divMostrar");
-      var miSpan=document.getElementById(contador);
-      var nombreImagen=miSpan.firstChild.src;
-      miPost1.crearPost(textPost.value, estado.value,nombreImagen);
+      var miSpan = document.getElementById(contador);
+      var nombreImagen = miSpan.firstChild.src;
+      miPost1.crearPost(textPost.value, estado.value, nombreImagen);
       miPost1.creaPost(div);
       textPost.value = "";
-     miSpan.innerHTML="";
-     contador++;
+      miSpan.innerHTML = "";
+      contador++;
   });
