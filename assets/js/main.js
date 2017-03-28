@@ -1,7 +1,6 @@
   var btnPublicar = document.getElementById("botonPublicar");
   var miPost1 = new miPost();
   var contador = 0;
-
   function miPost() {
       this.array = [];
       this.contador = 0;
@@ -84,4 +83,9 @@
       textPost.value = "";
       miSpan.innerHTML = "";
       contador++;
+      var usuarioActual=localStorage.getItem("autentica");
+      localStorage.setItem(usuarioActual, JSON.stringify(miPost1));
+      console.log("contenido actual "+ JSON.parse(localStorage.getItem(usuarioActual)));
+
+
   });

@@ -1,5 +1,6 @@
 body {
   background-color: #EEF1F4  ;
+
 }
 .thumb {
   height: 250px;
@@ -7,4 +8,5 @@ body {
 }
 #fielset{
   background-color:black ;
+  text-align: center;
 }
